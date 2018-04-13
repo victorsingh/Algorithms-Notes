@@ -1,11 +1,11 @@
-#Heapsort
+# Heapsort
 
-Heapsort has a running time of O(nlog<sub>2<sub>n)
+Heapsort has a running time of O(nlog<sub>2</sub>n)
 
 The role of heapsort is used to sort a heap data structure
 ..* A heap is a data structure that an array object that we percieve as an almost complete binary search tree
 
-##Properties of nearly complete binary trees
+## Properties of nearly complete binary trees
 
 * The root of our almost complete tree is A[1]
 * If we're give a node of index i, we can easily compute the indicies of its 
@@ -14,6 +14,7 @@ The role of heapsort is used to sort a heap data structure
 ..* right child 2i + 1
 
 example:
+
                 o 
             *       o
           o   o   o   
@@ -25,6 +26,7 @@ left child = 2 * 2 = 4
 right child = 2 * 2 + 1 = 5
 
 By index:
+
                 1 
             *       3
           4   5   6   
@@ -43,7 +45,7 @@ Our array now:
 
 [16, 143, 3, 46, 85, 60]
 
-#Heap
+# Heap
 
 Our heap, as we've seen is an array object represented as A[]
 
