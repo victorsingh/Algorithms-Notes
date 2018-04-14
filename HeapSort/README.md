@@ -106,11 +106,11 @@ And we want to sort this heap.
                 4
           11          9
        10    5      6   8
-      1  2 <del>16</del>
+      1  2 ~~16~~
 
 **Step 3: Run max heapify so our tree becomes a heap again**
 
                 11
           10          9
        4    5      6   8
-     1  2 <del>16</del>
+     1  2 ~~16~~
