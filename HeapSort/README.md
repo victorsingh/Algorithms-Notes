@@ -49,10 +49,68 @@ Our array now:
 
 Our heap, as we've seen is an array object represented as A[]
 
-Our heap has two attributes:
+* Our heap has two attributes:
 ..* length(A)
 ..* heap-size(A)
 
+A heap is an _almost complete_ binary tree that satisfies either the min-heap or max-heap property
+
+## Max Heap vs Min heap
+
+* min-heap
+..* The value of the parent is **less** than or equal to that of its children
+
+* max-heap
+..* The value of the parent is **more** than or equal to that of its children
+
+# Height of a heap
+
+This height of a heap is the number of nodes down from the longest path towards a leaf
+
+* The height of a heap is the height of its root
+
+If we have a heap of n elements, its height is Big Omega (log n)
+
+# The 5 procedures
+
+* Heapify: Maintains the heap property
+* Build-Heap: builds a heap from an unordered array
+* HeapSort: Sorts an array in place
+* Extract-Max: selects a new element
+* Insert: Inserts a new element
 
 
 
+# Heapify example
+
+Lets say we have a given heap (assume we build heap already):
+
+[16, 11, 9, 10, 5, 6, 8, 1, 2, 4]
+
+                16
+          11          9
+       10    5      6   8
+      1  2  4
+
+And we want to sort this heap.
+
+**Step 1: Exchange A[1] value with i in for loop starting with A.length**
+
+                4
+          11          9
+       10    5      6   8
+      1  2  16
+
+**Step 2: Decrease heap size, which will in turn remove the leaf you just swapped with the root**
+
+                4
+          11          9
+       10    5      6   8
+      1  2 <del>16</del>
+
+**Step 3: Run max heapify so our tree becomes a heap again**
+
+                11
+          10          9
+       4    5      6   8
+     1  2 <del>16</del>
